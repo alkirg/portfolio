@@ -26,9 +26,11 @@ $.gulp.task('default', $.gulp.series(
     'pug',
     'js:foundation',
     'js:process',
-    'copy:image',
+    // 'copy:image',
     'css:foundation',
-    'sprite:svg'
+    'sprite:svg',
+    'genimage',
+    'copy'
   ),
   $.gulp.parallel(
     'watch',
