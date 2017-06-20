@@ -1,0 +1,31 @@
+-
+    var menu = [
+        {
+            title: 'Мои работы',
+            link: 'works.html'
+        },
+        {
+            title: 'Блог',
+            link: 'blog.html'
+        },
+        {
+            title: 'Обо мне',
+            link: 'about.html'
+        },
+        {
+            title: 'Авторизация',
+            link: 'welcome.html'
+        }
+    ]
+
+.icons
+    a.icon-vk(href='#')
+    a.icon-github(href='#')
+    a.icon-linkedin(href='#')
+
+.menu-top
+    nav
+        ul
+            each menuItem in menu
+                li
+                    a(href=`${menuItem.link}`) #{menuItem.title}

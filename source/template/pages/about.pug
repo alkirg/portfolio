@@ -3,8 +3,11 @@ extends ../_template
 block variables
     - var title = 'About page'
 
+block header
+    include ../common/_header
+
 block content
-    include ../common/_greating
+    h1 Обо мне
 
 block footer
-    footer
+    include ../common/_footer
