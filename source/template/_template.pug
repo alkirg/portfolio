@@ -1,3 +1,5 @@
+include common/_variables
+include common/_mixins
 block variables
 
 doctype html
@@ -24,9 +26,5 @@ html
         <![endif]-->
 
     body
-        header
-            block header
-        main
-            block content
-        footer
-            block footer
+        block content
+        block footer

@@ -1,0 +1,31 @@
+mixin menuMixin(className, items)
+    nav(class=`${className}`)
+        ul(class=`${className}__list`)
+            each item in items
+                li(class=`${className}__item`)
+                    a(href=`${item.link}` class=`${className}__link`)= item.title
+
+mixin socialLinks(className, items)
+    div(class=`${className}`)
+        ul(class=`${className}__list`)
+            each item in items
+                li(class=`${className}__item`)
+                    a(href=`${item.link}` class=`${className}__link ${className}__link-${item.title}`)
+
+mixin heroSection(title)
+    section.hero
+        .page-title
+            .page-title__text= title
+        .hamburger-menu
+            +menuMixin('menu', menu)
+        .developer.hero__developer
+            .developer__image
+                img.developer__photo(src="" alt="Владимир Астахов")
+            .developer__name
+                p Владимир Астахов
+            .developer__info
+                p Личный сайт веб-разработчика
+        .arrow-down.arrow-down_center
+        .triangles
+            .triangle.triangle_left
+            .triangle.triangle_right

@@ -3,11 +3,10 @@ extends ../_template
 block variables
     - var title = 'About page'
 
-block header
-    include ../common/_header
-
 block content
-    h1 Обо мне
+    +heroSection('Portfolio')
+    section.content
+    section.map
 
 block footer
     include ../common/_footer
