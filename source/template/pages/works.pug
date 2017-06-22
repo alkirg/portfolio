@@ -1,0 +1,12 @@
+extends ../_template
+
+block variables
+    - var title = 'Portfolio page'
+
+block content
+    +heroSection('Portfolio')
+    section.content
+    section.map
+
+block footer
+    include ../common/_footer

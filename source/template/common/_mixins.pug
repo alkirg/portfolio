@@ -29,3 +29,22 @@ mixin heroSection(title)
         .triangles
             .triangle.triangle_left
             .triangle.triangle_right
+
+mixin skillsBlock(title, skills, className)
+    div(class=`${className}`)
+        div(class=`${className}__title`)= title
+        div(class=`${className}__skills`)
+            each skill in skills
+                div= skill.name
+                div= skill.percent
+
+mixin contactsList(contacts, className)
+    ul(class=`${className}`)
+        each contact in contacts
+            li(class=`${className}__item`)
+                div(class=`${className}__icon_${contact.type}`)
+                if contact.type == 'em'
+                    div(class=`${className}__contact_value`)
+                        a(class=`${className}__link` href=`mailto:${contact.value}`)= contact.value
+                else
+                    div(class=`${className}__contact_value`)= contact.value

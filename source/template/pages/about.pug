@@ -6,7 +6,28 @@ block variables
 block content
     +heroSection('Portfolio')
     section.content
+        .content__left
+            .content__title Обо мне
+            .content__photo
+                img.content__photo_img(src="" alt="")
+            .content__info
+                .content__subtitle Кто я
+                .content__text
+                    p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                    p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+        .content__right
+            .content__title.content__title--small Чем я могу быть вам полезен
+            .content__text
+                p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+            +skillsBlock('Frontend', [skills[0], skills[1], skills[2]], 'skills-block')
+            +skillsBlock('Backend', [skills[3], skills[4], skills[5], skills[6]], 'skills-block')
+            +skillsBlock('WorkFlow', [skills[7], skills[8], skills[9]], 'skills-block')
     section.map
-
+        .background
+            img.background__image(src="" alt="")
+        .map__wrapper
+            .contacts-block
+                .contacts-block__title Контакты
+                +contactsList(contacts, 'contacts-list')
 block footer
     include ../common/_footer
