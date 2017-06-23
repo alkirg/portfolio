@@ -3,7 +3,7 @@ include common/_mixins
 block variables
 
 doctype html
-html
+html(class=`${pageClass}`)
     head
         meta(charset="utf-8")
         title #{title}
@@ -16,6 +16,7 @@ html
         //- favicon block start
         //- favicon block end
 
+        link(rel='stylesheet' href='/assets/css/normalize.css')
         link(rel='stylesheet' href='/assets/css/foundation.css')
         link(rel='stylesheet' href='/assets/css/app.css')
         script(src='/assets/js/foundation.js' defer)

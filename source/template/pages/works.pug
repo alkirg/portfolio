@@ -6,7 +6,51 @@ block variables
 block content
     +heroSection('Portfolio')
     section.content
+        .content__title
+            +titleImage(
+                'content',
+                {front: 'Мои работы', back: 'works'}
+            )
+        .content__left
+            .container.container_center_center
+                .work-info
+                    .work-info__title Сайт школы онлайн Образования
+                    .work-info__skills HTML , CSS, JAVASCRIPT
+                    .work-info__link
+                        a(class="work-info__button_link" href="#") Посмотреть сайт
+        .content__right
+            .work-slider
+                .work-slider__image
+                    img(src="" alt="")
+                .work-slider__navigation
+                    .work-slider__nav_down
+                        .work-slider__nav_image
+                            img(src="" alt="")
+                        .work-slider__nav_arrow--down
+                    .work-slider__nav_up
+                        .work-slider__nav_image
+                            img(src="" alt="")
+                        .work-slider__nav_arrow--up
     section.map
+        +backgroundImage('', 'map')
+        .container.container_center_center
+            +titleImage(
+                'map',
+                {front: 'Что обо мне говорят', back: 'about'}
+            )
+        .reviews.container.container_left_top
+            +review(
+                'Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!',
+                {src: '', alt: ''},
+                {name: 'Ковальчук Дмитрий', occupation: 'основатель Loftschool'}
+            )
+            +review(
+            'Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!',
+            {src: '', alt: ''},
+            {name: 'Сабанцев Владимир', occupation: 'преподаватель'}
+            )
+        .container.container_center_center
+            +contactsForm
 
 block footer
     include ../common/_footer

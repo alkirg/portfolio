@@ -1,5 +1,9 @@
-body {
-  margin: 0;
+.container {
+  display: flex;
+
+  &_center_center {
+    margin: auto;
+  }
 }
 
-@import 'common/greating';
+@import "common/login-page.scss";

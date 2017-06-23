@@ -48,3 +48,56 @@ mixin contactsList(contacts, className)
                         a(class=`${className}__link` href=`mailto:${contact.value}`)= contact.value
                 else
                     div(class=`${className}__contact_value`)= contact.value
+
+mixin backgroundImage(src, alt)
+    .background
+        img.background__image(src=`${src}` alt=`${alt}`)
+
+mixin titleImage(className, title)
+    div(class=`${className}__title_background`)= title.back
+    div(class=`${className}__title_text`)= title.front
+
+mixin review(text, image, name)
+    .reviews__review
+        .reviews__text= text
+        .reviews__author.container.container_left_center
+            .reviews__photo
+                img(src=`${image.src}` alt=`${image.alt}`)
+            .reviews__name
+                p= name.name
+                p= name.occupation
+
+mixin contactsForm
+    .contacts-form
+        .contacts-form__title Связаться со мной
+        .contacts-form__fields
+            input.contacts-form__input.contacts-form__input--name(placeholder="Имя")
+            input.contacts-form__input.contacts-form__input--email(placeholder="Email")
+            textarea.contacts-form__textarea
+        .contacts-form__buttons
+            button.contacts-form__button.contacts-form__button--submit Отправить
+            button.contacts-form__button.contacts-form__button--clear Очистить
+
+mixin loginForm
+    .login-form
+        .login-form__title Авторизуйтесь
+        input.login-form__input.login-form__input--name(placeholder="Логин" type="text")
+        input.login-form__input.login-form__input--password(placeholder="Пароль" type="password")
+        .login-form__is_human
+            input.login-form__checkbox#checkbox
+            label(for="checkbox") Я человек
+        p Вы точно не робот?
+        .login-form__radiobox
+            .login-form__radio
+                input.login-form__radio_button#radio1(type="radio" name="radio")
+                label(for="radio1") Да
+            .login-form__radio
+                input.login-form__radio_button#radio2(type="radio" name="radio")
+                label(for="radio2") Не уверен
+        .login-form__buttons
+            a.login-form__button(href="/") На главную
+            a.login-form__button(href="#") Войти
+
+
+
+
