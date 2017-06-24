@@ -31,7 +31,7 @@ $.gulp.task('default', $.gulp.series(
     'sprite:svg',
     // 'genimage',
     'copy',
-    'font2css'
+    // 'font2css'
   ),
   $.gulp.parallel(
     'watch',

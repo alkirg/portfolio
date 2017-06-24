@@ -1,6 +1,15 @@
 .page-login {
   background: url(../images/page-login.jpg) no-repeat center center fixed;
   background-size: cover;
+  display: flex;
+  min-height: 100%;
+
+  body {
+    margin: auto;
+  }
+}
+.copyright__block--margin_top {
+  margin-top: 101px;
 }
 
 @import "login-form.scss";

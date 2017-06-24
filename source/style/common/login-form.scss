@@ -1,8 +1,113 @@
 .login-form {
+  text-align: center;
+  border-radius: 5px;
+  background-color: rgba(#fcfcfc, 0.85);
+  padding: 33px 0 0;
+  width: 380px;
+
   &__title {
     color: #455a64;
-    font-family: "BERNIER";
+    font-family: "BERNIER Regular";
     font-size: 35px;
-    line-height: 41px;
+  }
+  &__title--margin_bottom {
+    margin-bottom: 40px;
+  }
+  &__input {
+    border-radius: 4px;
+    background-color: #ffffff;
+    border: 0;
+    color: #373e42;
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 45px;
+    padding: 0 18px;
+    width: 295px;
+  }
+  &__margin_bottom {
+    margin-bottom: 20px;
+  }
+  &__icon {
+    background-color: #f0efe9;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    display: inline-block;
+  }
+  &__check {
+    display: inline-block;
+  }
+  &__checkbox {
+    display: none;
+  }
+  &__label {
+    cursor: pointer;
+    position: relative;
+  }
+  &__label--checkbox:before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    background-color: #00bfa5;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  &__checkbox:checked + &__label--checkbox:before {
+    content: '\f00c';
+  }
+  &__question {
+    color: #455a64;
+    opacity: 0.8;
+    font-weight: 700;
+  }
+  &__question--margin {
+    margin: 19px 0 11px;
+  }
+  &__radio_button {
+    display: none;
+  }
+  &__label--radio:before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  &__radio_button:checked + &__label--radio:after {
+    content: '';
+    display: inline-block;
+    background-color: #00bfa5;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    border-radius: 50%;
+    top: 7px;
+    left: 7px;
+    z-index: 2;
+  }
+  &__margin_right {
+    margin-right: 40px;
+  }
+  &__buttons--margin_top {
+    margin-top: 39px;
+  }
+  &__button {
+    background-color: #00bfa5;
+    width: 190px;
+    height: 45px;
+    font-weight: 500;
+    line-height: 45px;
+    color: #ffffff;
+    display: block;
+    text-decoration: none;
+  }
+  &__button:hover {
+    background-color: #009688;
   }
 }
