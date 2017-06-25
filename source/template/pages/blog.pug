@@ -1,0 +1,11 @@
+extends ../_template
+
+block variables
+    - var title = 'Blog page'
+
+block content
+    +heroSection('Portfolio')
+    section.content
+
+block footer
+    include ../common/_footer

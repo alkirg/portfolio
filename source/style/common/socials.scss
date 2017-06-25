@@ -1,0 +1,41 @@
+.socials {
+  &__list {
+    list-style: none;
+  }
+  &__item {
+    margin-left: 10px;
+    display: inline-block;
+  }
+}
+
+.social-icon {
+  fill: rgba(#fff, 0.5);
+
+  &:hover {
+    fill: #fff;
+  }
+  &__vk {
+    width: 31px;
+    height: 17px;
+  }
+  &__github {
+    width: 26px;
+    height: 22px;
+  }
+  &__in {
+    width: 24px;
+    height: 22px;
+  }
+  &__rounded {
+    width: 36px;
+    height: 36px;
+    fill: #555b5e;
+    background-color: #aaadaf;
+    border-radius: 50%;
+    stroke: #f9f9f9;
+  }
+  &__rounded:hover {
+    fill: #fff;
+    background-color: #555b5e;
+  }
+}

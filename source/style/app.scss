@@ -1,56 +1,9 @@
 @import "common/fonts.scss";
 @import "common/icons.scss";
-
-* {
-  box-sizing: border-box;
-}
-body {
-  font: 16px/24px Roboto;
-}
-p {
-  margin: 0;
-}
-label {
-  opacity: 0.8;
-  color: #455a64;
-}
-.text {
-  &__text--white {
-    color: #fff;
-  }
-}
-.container {
-  display: flex;
-
-  &_center_center {
-    margin: auto;
-  }
-  &_row {
-    flex-flow: row wrap;
-  }
-  &_col {
-    flex-flow: column wrap;
-  }
-  &_justify_center {
-    justify-content: center;
-  }
-}
-.title {
-  &__title--lines:before, &__title--lines:after {
-    content: '';
-    display: inline-block;
-    vertical-align: middle;
-    width: 22px;
-    height: 5px;
-    background-color: #373e42;
-    opacity: 0.2;
-  }
-  &__title--lines:before {
-    margin-right: 20px;
-  }
-  &__title--lines:after {
-    margin-left: 20px;
-  }
-}
-
+@import "common/container.scss";
+@import "common/socials.scss";
+@import "common/common.scss";
+@import "common/menu.scss";
 @import "common/login-page.scss";
+@import "common/hero.scss";
+@import "common/footer.scss";

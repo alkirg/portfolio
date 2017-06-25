@@ -1,0 +1,39 @@
+@import "common/hamburger-menu.scss";
+
+.hero {
+  background: url('/assets/images/hero-bg.png') no-repeat;
+  background-size: cover;
+  padding: 28px 30px 260px;
+
+  &__developer {
+    margin: 90px 0 133px;
+  }
+}
+.developer {
+  &__image {
+    margin-bottom: 30px;
+  }
+  &__name {
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 7px;
+  }
+  &__info {
+    opacity: 0.8;
+    color: #ffffff;
+    font-weight: 300;
+  }
+}
+.arrow-down {
+  background: url('/assets/images/arrow-down.png') no-repeat;
+  width: 26px;
+  height: 16px;
+  opacity: 0.7;
+  display: block;
+
+  &_center {
+    margin: 0 auto;
+  }
+}

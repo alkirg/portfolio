@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+
+  &_center_center {
+    margin: auto;
+  }
+  &_row {
+    flex-flow: row wrap;
+  }
+  &_col {
+    flex-flow: column wrap;
+  }
+  &_justify_center {
+    justify-content: center;
+  }
+  &_justify_flexend {
+    justify-content: flex-end;
+  }
+  &_align_center {
+    align-items: center;
+  }
+  &_align_right {
+    margin-left: auto;
+  }
+}

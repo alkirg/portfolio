@@ -53,6 +53,7 @@
     background-color: #00bfa5;
     vertical-align: middle;
     margin-right: 10px;
+    color: #fff;
   }
   &__checkbox:checked + &__label--checkbox:before {
     content: '\f00c';

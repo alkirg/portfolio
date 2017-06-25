@@ -1,11 +1,12 @@
 footer.footer
-    .row
-        .col.footer__column_left
+    .container.container_justify_center.footer__row
+        .col.footer__column_left.container_center_center
             +menuMixin('menu', menu)
-        .col.footer__column_right
-            +socialLinks('socials', socials)
-    .row
-        .col.footer__column_left
+        .col.footer__column_right.container_center_center
+            +socialLinks('socials', socials, true)
+    hr
+    .container.container_justify_center.footer__row.footer__text--semitransparent
+        .col.footer__column_left.container_center_center
             p Я веб-разработчик из Новосибирска, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
-        .col.footer__column_right
+        .col.footer__column_right.container_center_center
             p &copy Владимир Астахов | создано с любовью в LoftSchool | 2016
