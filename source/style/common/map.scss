@@ -1,0 +1,11 @@
+.map {
+  position: relative;
+
+  &__wrapper {
+    .contacts-block {
+      position: absolute;
+      top: calc(50% - 95px);
+      left: calc(50% - 190px);
+    }
+  }
+}

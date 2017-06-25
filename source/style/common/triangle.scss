@@ -1,0 +1,17 @@
+.triangle {
+  width: 100%;
+
+  &__left {
+    left: 0;
+    width: 50%;
+    bottom: calc(100% - 44px);
+  }
+  &__right {
+    right: 0;
+    width: 53%;
+    bottom: calc(100% - 7px);
+  }
+}
+.content__triangle {
+  position: absolute;
+}

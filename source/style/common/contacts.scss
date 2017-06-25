@@ -1,0 +1,42 @@
+.contacts-block {
+  width: 380px;
+  height: 290px;
+  border-radius: 5px;
+  background-color: rgba(#fcfcfc, .85);
+  padding: 35px 40px;
+
+  &__title {
+    margin-top: 0;
+  }
+}
+.contacts-list {
+  list-style: none;
+  &__item {
+    margin-bottom: 18px;
+  }
+}
+.icon-contact {
+  fill: #00bfa5;
+  display: inline-block;
+  vertical-align: middle;
+
+  &__skype {
+    width: 24px;
+    height: 24px;
+  }
+  &__envelope {
+    width: 23px;
+    height: 17px;
+  }
+  &__phone {
+    width: 19px;
+    height: 18px;
+  }
+  &__map_marker {
+    width: 19px;
+    height: 24px;
+  }
+  &__margin {
+    margin-right: 10px;
+  }
+}

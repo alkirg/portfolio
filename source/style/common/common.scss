@@ -7,6 +7,14 @@ body {
 p {
   margin: 0;
 }
+a {
+  color: #6da3bd;
+  font-weight: 600;
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}
 ul {
   margin: 0;
   padding: 0;
@@ -25,6 +33,9 @@ label {
   }
 }
 .title {
+  color: #455a64;
+  font-family: "BERNIER Regular";
+
   &__title--lines:before, &__title--lines:after {
     content: '';
     display: inline-block;

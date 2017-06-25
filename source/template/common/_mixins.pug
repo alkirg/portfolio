@@ -14,7 +14,7 @@ mixin socialLinks(className, items, isRounded)
                         svg(class=`social-icon social-icon__${item.title}${isRounded?' social-icon__rounded':''}`)
                             use(xlink:href=`assets/images/sprite.svg#${item.title}${isRounded?'_round':''}`)
 
-mixin heroSection(title)
+mixin heroSection(title, showTrianlges)
     section.hero
         .container
             +socialLinks('socials', socials, false)
@@ -30,9 +30,12 @@ mixin heroSection(title)
             .developer__info
                 p Личный сайт веб-разработчика
         a.arrow-down.arrow-down_center(href="#")
-        .triangles
-            .triangle.triangle_left
-            .triangle.triangle_right
+        if showTrianlges
+            .triangles
+                .triangles__left
+                    +triangle('assets/images/about_bg_left.svg#Layer_1')
+                .triangles__right
+                    +triangle('assets/images/about_bg_right.svg#Layer_1')
 
 mixin skillsBlock(title, skills, className)
     div(class=`${className}`)
@@ -46,12 +49,12 @@ mixin contactsList(contacts, className)
     ul(class=`${className}`)
         each contact in contacts
             li(class=`${className}__item`)
-                div(class=`${className}__icon_${contact.type}`)
-                if contact.type == 'em'
-                    div(class=`${className}__contact_value`)
-                        a(class=`${className}__link` href=`mailto:${contact.value}`)= contact.value
+                svg(class=`icon-contact icon-contact__${contact.type} icon-contact__margin`)
+                    use(xlink:href=`assets/images/sprite.svg#${contact.type}`)
+                if contact.type == 'envelope'
+                    a(href=`mailto:${contact.value}`)= contact.value
                 else
-                    div(class=`${className}__contact_value`)= contact.value
+                    =contact.value
 
 mixin backgroundImage(src, alt)
     .background
@@ -106,3 +109,6 @@ mixin loginForm
             a.login-form__button(href="/") На главную
             a.login-form__button(href="#") Войти
 
+mixin triangle(src)
+    svg.triangle
+        use(xlink:href=`${src}`)

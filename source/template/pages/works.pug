@@ -4,33 +4,34 @@ block variables
     - var title = 'Portfolio page'
 
 block content
-    +heroSection('Portfolio')
+    +heroSection('Portfolio', true)
     section.content
-        .content__title
+        .content__title.title.title__title--lines Мои работы
+        //.content__title
             +titleImage(
                 'content',
                 {front: 'Мои работы', back: 'works'}
             )
-        .content__left
-            .container.container_center_center
-                .work-info
-                    .work-info__title Сайт школы онлайн Образования
+        .container
+            .content__left.container
+                .work-info.container_center_center
+                    .work-info__title.content__title.content__title--small.title.title__title--lines Сайт школы онлайн Образования
                     .work-info__skills HTML , CSS, JAVASCRIPT
                     .work-info__link
                         a(class="work-info__button_link" href="#") Посмотреть сайт
-        .content__right
-            .work-slider
-                .work-slider__image
-                    img(src="" alt="")
-                .work-slider__navigation
-                    .work-slider__nav_down
-                        .work-slider__nav_image
-                            img(src="" alt="")
-                        .work-slider__nav_arrow--down
-                    .work-slider__nav_up
-                        .work-slider__nav_image
-                            img(src="" alt="")
-                        .work-slider__nav_arrow--up
+            .content__right.content__padding_none
+                .work-slider.container.container_col
+                    .work-slider__image.container_center_center
+                        img(src="/assets/images/portfolio-current.png" alt="Работа 1")
+                    .work-slider__navigation.container.container_center_center
+                        .work-slider__nav.work-slider__nav--down
+                            .work-slider__nav_image
+                                img(src="/assets/images/portfolio-down.jpg" alt="Работа 2")
+                            .work-slider__nav_arrow.work-slider__nav_arrow--down
+                        .work-slider__nav.work-slider__nav--up
+                            .work-slider__nav_image
+                                img(src="/assets/images/portfolio-down.jpg" alt="Работа 3")
+                            .work-slider__nav_arrow.work-slider__nav_arrow--up
     section.map
         +backgroundImage('', 'map')
         .container.container_center_center

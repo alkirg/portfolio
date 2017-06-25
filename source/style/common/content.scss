@@ -1,0 +1,31 @@
+.content {
+  color: #455a64;
+
+  p {
+    margin-bottom: 10px;
+  }
+  &__left {
+    width: 50%;
+    background-color: #f0efea;
+    padding: 20px 78px 17px 80px;
+  }
+  &__right {
+    width: 50%;
+    background-color: #efece0;
+    padding: 20px 28px 17px 40px;
+  }
+  &__title {
+    font-size: 63px;
+    line-height: 66px;
+    margin: 70px 0;
+    text-align: center;
+  }
+  &__title--small {
+    font-size: 35px;
+    line-height: 41px;
+    margin: 40px 0;
+  }
+  &__padding_none {
+    padding: 0;
+  }
+}
