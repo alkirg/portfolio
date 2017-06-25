@@ -1,7 +1,7 @@
 @import "common/hamburger-menu.scss";
 
 .hero {
-  background: url('/assets/images/hero-bg.png') no-repeat;
+  background: url('../images/hero-bg.png') no-repeat;
   background-size: cover;
   padding: 28px 30px 0;
   height: 602px;
@@ -28,7 +28,7 @@
   }
 }
 .arrow-down {
-  background: url('/assets/images/arrow-down.png') no-repeat;
+  background: url('../images/arrow-down.png') no-repeat;
   width: 26px;
   height: 16px;
   opacity: 0.7;

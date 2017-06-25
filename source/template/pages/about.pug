@@ -11,7 +11,7 @@ block content
                 +triangle('assets/images/about_bg_left.svg#Layer_1')
             .content__title.title.title__title--lines Обо мне
             .content__photo
-                img.content__photo_img(src="/assets/images/about-photo.jpg" alt="Владимир Астахов")
+                img.content__photo_img(src="assets/images/about-photo.jpg" alt="Владимир Астахов")
             .content__info
                 .content__title.content__title--small.title.title__title--lines Кто я
                 .content__text
@@ -31,7 +31,7 @@ block content
                 +skillsBlock('WorkFlow', [skills[7], skills[8], skills[9]], 'skills')
     section.map
         .map__wrapper
-            +backgroundImage('/assets/images/map.jpg', 'Карта')
+            +backgroundImage('assets/images/map.jpg', 'Карта')
             .contacts-block
                 .contacts-block__title.content__title.content__title--small.title.title__title--lines Контакты
                 +contactsList(contacts, 'contacts-list')
