@@ -22,4 +22,8 @@
   &_align_right {
     margin-left: auto;
   }
+  &_centered {
+    justify-content: center;
+    align-items: center;
+  }
 }

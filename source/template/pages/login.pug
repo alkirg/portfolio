@@ -6,6 +6,30 @@ block variables
         var pageClass = 'page-login'
 
 block content
-    +loginForm
-    .copyright.copyright__block--margin_top
-        p.text__text--white © Владимир Астахов | создано с любовью в LoftSchool | 2016
+    main.main.page-login__content
+        .login-form
+            .title.title__subtitle Авторизуйтесь
+            .login-form__input_block
+                .login-form__icon.icon.icon-login
+                input.login-form__input(placeholder="Логин" type="text")
+            .login-form__input_block
+                .login-form__icon.icon.icon-password
+                input.login-form__input(placeholder="Пароль" type="password")
+            .login-form__check
+                input.login-form__checkbox#checkbox(type="checkbox")
+                label.login-form__label.login-form__label--checkbox(for="checkbox") Я человек
+            p.login-form__question Вы точно не робот?
+            .login-form__radiobox
+                .login-form__radio
+                    input.login-form__radio_button#radio1(type="radio" name="radio")
+                    label.login-form__label.login-form__label--radio(for="radio1") Да
+                .login-form__radio
+                    input.login-form__radio_button#radio2(type="radio" name="radio")
+                    label.login-form__label.login-form__label--radio(for="radio2") Не уверен
+            .login-form__buttons
+                a.login-form__button(href="/") На главную
+                a.login-form__button(href="#") Войти
+
+block footer
+    footer.footer
+        .copyright © Владимир Астахов | создано с любовью в LoftSchool | 2016

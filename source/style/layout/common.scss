@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font: 16px/24px Roboto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column wrap;
+  min-height: 100vh;
+}
+p {
+  margin: 0;
+}
+a {
+  color: #6da3bd;
+  font-weight: 600;
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+hr {
+  border-color: rgba(#ffffff, 0.1);
+  border-width: 1px 0 0 0;
+}
+label {
+  opacity: 0.8;
+  color: #455a64;
+}
+.title {
+  color: #455a64;
+  font-family: "BERNIER Regular";
+  font-size: 63px;
+  line-height: normal;
+  text-transform: uppercase;
+  margin: 70px 0;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  &:before, &:after {
+    content: '';
+    width: 22px;
+    height: 5px;
+    background-color: #373e42;
+    opacity: 0.2;
+  }
+  &:before {
+    margin-right: 20px;
+  }
+  &:after {
+    margin-left: 20px;
+  }
+  &__subtitle {
+    font-size: 35px;
+    margin: 0 0 40px 0;
+  }
+}
+.arrow-down {
+  background: url('../images/arrow-down.png') no-repeat;
+  width: 26px;
+  height: 16px;
+  opacity: 0.7;
+  display: block;
+
+  &:hover {
+    opacity: 1;
+  }
+  &_center {
+    margin: 0 auto;
+  }
+}
+.arrow-up {
+  background: url('../images/arrow-up.png') no-repeat;
+  width: 26px;
+  height: 16px;
+  opacity: 0.7;
+  display: block;
+
+  &:hover {
+    opacity: 1;
+  }
+  &_center {
+    margin: 0 auto;
+  }
+}
+.hero-page__main {
+  width: 100%;
+}
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.footer {
+  min-height: 50px;
+}

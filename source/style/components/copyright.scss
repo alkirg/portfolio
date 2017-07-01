@@ -1,0 +1,6 @@
+.copyright {
+  color: #fff;
+  @include phones {
+    text-align: center;
+  }
+}

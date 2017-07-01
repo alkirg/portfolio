@@ -1,0 +1,27 @@
+.page-index {
+  background: url('../images/page-login.jpg') no-repeat center center;
+  background-size: cover;
+  min-height: 100%;
+  &__header {
+    margin: 24px 20px 0 auto;
+    @include phones {
+      margin: 24px auto 0;
+    }
+  }
+}
+.main__user_info {
+  margin: 0 auto;
+}
+.header__login {
+  align-self: flex-start;
+}
+.header__login_button {
+  color: #ffffff;
+  font-weight: 500;
+  line-height: 36px;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+  padding: 15px 29px 14px 28px;
+}
+@import "../components/user-info";

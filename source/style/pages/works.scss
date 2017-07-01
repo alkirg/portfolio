@@ -1,0 +1,42 @@
+@import "../components/slider";
+@import "../common/contacts-form";
+
+.reviews-section {
+  background-image:url('../images/works-bg.png');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container_reviews {
+  width: 65%;
+  margin: 0 auto;
+}
+.container_contacts {
+  padding: 70px 0;
+}
+.reviews {
+  display: flex;
+  flex-direction: row;
+
+  &__review {
+    width: 50%;
+    margin-right: 37px;
+  }
+  &__author {
+    display: flex;
+    align-items: center;
+  }
+  &__photo {
+    margin-right: 20px;
+  }
+  &__person {
+    color: #20b5a1;
+  }
+  &__name {
+    font-weight: 700;
+  }
+}
+.arrow-up_works {
+  padding-bottom: 70px;
+}

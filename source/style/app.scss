@@ -1,14 +1,29 @@
-@import "common/fonts";
-@import "common/icons";
-@import "common/container";
-@import "common/socials";
-@import "common/common";
-@import "common/menu";
-@import "common/triangle";
-@import "common/hero";
-@import "common/content";
-@import "common/map";
-@import "page-login";
-@import "page-about";
-@import "page-works";
-@import "common/footer";
+//@import "common/icons";
+//@import "common/container";
+//@import "common/menu";
+//@import "common/triangle";
+//@import "common/hero";
+//@import "common/content";
+//@import "common/map";
+//@import "page-login";
+//@import "page-about";
+//@import "page-works";
+//@import "common/footer";
+
+// layout
+@import "layout/common";
+@import "layout/fonts";
+
+// mixins
+@import "mixins/mixins";
+
+// components
+@import "components/copyright";
+@import "components/socials";
+@import "components/icons";
+@import "components/hero";
+
+// pages
+@import "pages/index";
+@import "pages/login";
+@import "pages/works";

@@ -1,1 +1,41 @@
-include about
+extends ../_template
+
+block variables
+    -
+        var title = 'Владимир Астахов'
+        var pageClass = 'page-index';
+        var links = [
+            {
+                link: 'works.html',
+                name: 'Мои работы'
+            },
+            {
+                link: 'about.html',
+                name: 'Обо мне'
+            },
+            {
+                link: 'blog.html',
+                name: 'Блог'
+            }
+        ];
+
+block header
+    header.header.page-index__header
+        .header__login
+            a.header__login_button(href='login.html') Авторизоваться
+block content
+    main.main
+        .user-info.main__user_info
+            .user-info__image
+                img(src="assets/images/index-hero.jpg" alt="")
+            .user-info__person
+                .user-info__name Владимир Астахов
+                .user-info__subtitle Личный сайт веб разработчика
+            +socialLinks(socials, 'user-info__socials', false)
+            .user-info__links
+                each link in links
+                    a(class="user-info__link" href=`${link.link}`)= link.name
+
+block footer
+    footer.footer
+        .copyright © Владимир Астахов | создано с любовью в LoftSchool | 2016

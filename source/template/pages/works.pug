@@ -1,57 +1,36 @@
 extends ../_template
 
 block variables
-    - var title = 'Portfolio page'
+    -
+        var title = 'Portfolio page'
+        var pageClass = 'page-works'
 
 block content
-    +heroSection('Portfolio', true)
-    section.content
-        .content__title.title.title__title--lines Мои работы
-        //.content__title
-            +titleImage(
-                'content',
-                {front: 'Мои работы', back: 'works'}
-            )
-        .container
-            .content__left.container
-                .work-info.container_center_center
-                    .work-info__title.content__title.content__title--small.title.title__title--lines Сайт школы онлайн Образования
-                    .work-info__skills HTML , CSS, JAVASCRIPT
-                    .work-info__link
-                        a(class="work-info__button_link" href="#") Посмотреть сайт
-            .content__right.content__padding_none
-                .work-slider.container.container_col
-                    .work-slider__image.container_center_center
-                        img(src="assets/images/portfolio-current.png" alt="Работа 1")
-                    .work-slider__navigation.container.container_center_center
-                        .work-slider__nav.work-slider__nav--down
-                            .work-slider__nav_image
-                                img(src="assets/images/portfolio-down.jpg" alt="Работа 2")
-                            .work-slider__nav_arrow.work-slider__nav_arrow--down
-                        .work-slider__nav.work-slider__nav--up
-                            .work-slider__nav_image
-                                img(src="assets/images/portfolio-down.jpg" alt="Работа 3")
-                            .work-slider__nav_arrow.work-slider__nav_arrow--up
-    section.map
-        +backgroundImage('', 'map')
-        .container.container_center_center
-            +titleImage(
-                'map',
-                {front: 'Что обо мне говорят', back: 'about'}
-            )
-        .reviews.container.container_left_top
-            +review(
-                'Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!',
-                {src: '', alt: ''},
-                {name: 'Ковальчук Дмитрий', occupation: 'основатель Loftschool'}
-            )
-            +review(
-            'Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!',
-            {src: '', alt: ''},
-            {name: 'Сабанцев Владимир', occupation: 'преподаватель'}
-            )
-        .container.container_center_center
-            +contactsForm
+    main.main.hero-page__main
+        include ../common/hero
+        section.content
+            .title Мои работы
+            include ../common/slider
+        section.reviews-section
+            //+backgroundImage('', 'map')
+            .container.container_centered
+                .content__title.title.title__title--lines
+                    | Что обо мне <br>
+                    | говорят
+            .reviews.container.container_reviews
+                +review(
+                    'Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!',
+                    {src: 'assets/images/kd.png', alt: 'Ковальчук Дмитрий'},
+                    {name: 'Ковальчук Дмитрий', occupation: 'основатель Loftschool'}
+                )
+                +review(
+                'Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!',
+                {src: 'assets/images/sv.png', alt: 'Сабанцев Владимир'},
+                {name: 'Сабанцев Владимир', occupation: 'преподаватель'}
+                )
+            .container.container_centered.container_contacts
+                +contactsForm
+            a.arrow-up.arrow-up_center.arrow-up_works(href="#")
 
 block footer
     include ../common/_footer

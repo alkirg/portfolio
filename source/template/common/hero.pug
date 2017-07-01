@@ -1,0 +1,16 @@
+section.hero
+    .hero__row
+        +socialLinks(socials, '', false)
+        .hamburger-menu
+            .hamburger-menu__icon
+            .hamburger-menu__menu
+                +menuMixin('menu', menu)
+    .developer
+        img.developer__image(src="assets/images/hero.png" alt="Владимир Астахов")
+        .developer__name Владимир Астахов
+        .developer__info Личный сайт веб-разработчика
+    a.arrow-down(href="#")
+    .triangles
+        svg.rectangle(viewBox="0 0 100 100" preserveAspectRatio="none")
+            polygon.triangles__left(points="0 0, 0 100, 50 100")
+            polygon.triangle__right(points="100 0, 100 100, 50 100")

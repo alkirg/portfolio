@@ -1,0 +1,10 @@
+.page-login {
+  background: url('../images/page-login.jpg') no-repeat center center;
+  background-size: cover;
+  min-height: 100%;
+  &__content {
+    margin: auto;
+  }
+}
+
+@import "../components/login-form";

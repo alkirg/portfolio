@@ -1,0 +1,10 @@
+.icon {
+  color: #c4cbcd;
+
+  &-login {
+    background: url('../images/login.svg') no-repeat center;
+  }
+  &-password {
+    background: url('../images/password.svg') no-repeat center;
+  }
+}

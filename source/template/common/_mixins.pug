@@ -5,37 +5,14 @@ mixin menuMixin(className, items)
                 li(class=`${className}__item`)
                     a(href=`${item.link}` class=`${className}__link`)= item.title
 
-mixin socialLinks(className, items, isRounded)
-    div(class=`${className}`)
-        ul(class=`${className}__list`)
+mixin socialLinks(items, modifier, isRounded)
+    div(class=`socials ${modifier}`)
+        ul.socials__list
             each item in items
-                li(class=`${className}__item`)
-                    a(class=`${className}__link` href=`${item.link}` target="_blank")
+                li.socials__item
+                    a.socials__link(href=`${item.link}` target="_blank")
                         svg(class=`social-icon social-icon__${item.title}${isRounded?' social-icon__rounded':''}`)
                             use(xlink:href=`assets/images/sprite.svg#${item.title}${isRounded?'_round':''}`)
-
-mixin heroSection(title, showTrianlges)
-    section.hero
-        .container
-            +socialLinks('socials', socials, false)
-            .hamburger-menu.container_align_right
-                .hamburger-menu__icon
-                .hamburger-menu__menu
-                    +menuMixin('menu', menu)
-        .developer.hero__developer.container.container_col.container_align_center
-            .developer__image
-                img.developer__photo(src="/assets/images/hero.png" alt="Владимир Астахов")
-            .developer__name
-                p Владимир Астахов
-            .developer__info
-                p Личный сайт веб-разработчика
-        a.arrow-down.arrow-down_center(href="#")
-        if showTrianlges
-            .triangles
-                .triangles__left
-                    +triangle('assets/images/about_bg_left.svg#Layer_1')
-                .triangles__right
-                    +triangle('assets/images/about_bg_right.svg#Layer_1')
 
 mixin skillsBlock(title, skills, className)
     div(class=`${className}`)
@@ -56,59 +33,27 @@ mixin contactsList(contacts, className)
                 else
                     =contact.value
 
-mixin backgroundImage(src, alt)
-    .background
-        img.background__image(src=`${src}` alt=`${alt}`)
-
-mixin titleImage(className, title)
-    div(class=`${className}__title_background`)= title.back
-    div(class=`${className}__title_text`)= title.front
-
 mixin review(text, image, name)
     .reviews__review
         .reviews__text= text
         .reviews__author.container.container_left_center
             .reviews__photo
                 img(src=`${image.src}` alt=`${image.alt}`)
-            .reviews__name
-                p= name.name
-                p= name.occupation
+            .reviews__person
+                .reviews__name= name.name
+                .reviews__occupation= name.occupation
 
 mixin contactsForm
     .contacts-form
-        .contacts-form__title Связаться со мной
+        .contacts-form__title.content__title.content__title--small.title.title__title--lines Связаться со мной
         .contacts-form__fields
             input.contacts-form__input.contacts-form__input--name(placeholder="Имя")
             input.contacts-form__input.contacts-form__input--email(placeholder="Email")
-            textarea.contacts-form__textarea
+            textarea.contacts-form__textarea(placeholder="Ваше сообщение")
         .contacts-form__buttons
             button.contacts-form__button.contacts-form__button--submit Отправить
             button.contacts-form__button.contacts-form__button--clear Очистить
 
-mixin loginForm
-    .login-form.container_center_center
-        .login-form__title.title__title--lines.login-form__title--margin_bottom Авторизуйтесь
-        .container.container_row.container_justify_center.login-form__margin_bottom
-            .login-form__icon.icon.icon-login
-            input.login-form__input.login-form__input--name(placeholder="Логин" type="text")
-        .container.container_row.container_justify_center.login-form__margin_bottom
-            .login-form__icon.icon.icon-password
-            input.login-form__input.login-form__input--password(placeholder="Пароль" type="password")
-        .login-form__check
-            input.login-form__checkbox#checkbox(type="checkbox")
-            label.login-form__label.login-form__label--checkbox(for="checkbox") Я человек
-        p.login-form__question.login-form__question--margin Вы точно не робот?
-        .login-form__radiobox.container.container_row.container_justify_center
-            .login-form__radio.login-form__margin_right
-                input.login-form__radio_button#radio1(type="radio" name="radio")
-                label.login-form__label.login-form__label--radio(for="radio1") Да
-            .login-form__radio
-                input.login-form__radio_button#radio2(type="radio" name="radio")
-                label.login-form__label.login-form__label--radio(for="radio2") Не уверен
-        .login-form__buttons.login-form__buttons--margin_top.container.container_justify_center
-            a.login-form__button(href="/") На главную
-            a.login-form__button(href="#") Войти
-
-mixin triangle(src)
-    svg.triangle
-        use(xlink:href=`${src}`)
+mixin backgroundImage(src, alt)
+    .background
+        img.background__image(src=`${src}` alt=`${alt}`)
