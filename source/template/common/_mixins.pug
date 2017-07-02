@@ -15,12 +15,11 @@ mixin socialLinks(items, modifier, isRounded)
                             use(xlink:href=`assets/images/sprite.svg#${item.title}${isRounded?'_round':''}`)
 
 mixin skillsBlock(title, skills, className)
-    div(class=`${className}`)
-        div(class=`${className}__title`)= title
-        div(class=`${className}__skills`)
-            each skill in skills
-                div= skill.name
-                div= skill.percent
+    div(class=`${className}__title`)= title
+    div(class=`${className}__list`)
+        each skill in skills
+            div= skill.name
+            div= skill.percent
 
 mixin contactsList(contacts, className)
     ul(class=`${className}`)
@@ -36,23 +35,12 @@ mixin contactsList(contacts, className)
 mixin review(text, image, name)
     .reviews__review
         .reviews__text= text
-        .reviews__author.container.container_left_center
+        .reviews__author
             .reviews__photo
                 img(src=`${image.src}` alt=`${image.alt}`)
             .reviews__person
                 .reviews__name= name.name
                 .reviews__occupation= name.occupation
-
-mixin contactsForm
-    .contacts-form
-        .contacts-form__title.content__title.content__title--small.title.title__title--lines Связаться со мной
-        .contacts-form__fields
-            input.contacts-form__input.contacts-form__input--name(placeholder="Имя")
-            input.contacts-form__input.contacts-form__input--email(placeholder="Email")
-            textarea.contacts-form__textarea(placeholder="Ваше сообщение")
-        .contacts-form__buttons
-            button.contacts-form__button.contacts-form__button--submit Отправить
-            button.contacts-form__button.contacts-form__button--clear Очистить
 
 mixin backgroundImage(src, alt)
     .background

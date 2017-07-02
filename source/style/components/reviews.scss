@@ -1,0 +1,28 @@
+.reviews {
+  display: flex;
+  flex-direction: row;
+  width: 65%;
+
+  &__text {
+    color: #455a64;
+    margin-bottom: 27px;
+  }
+  &__review {
+    width: 50%;
+    margin-right: 37px;
+  }
+  &__author {
+    display: flex;
+    align-items: center;
+  }
+  &__photo {
+    margin-right: 20px;
+    height: 78px;
+  }
+  &__person {
+    color: #20b5a1;
+  }
+  &__name {
+    font-weight: 700;
+  }
+}

@@ -33,10 +33,12 @@
     fill: #555b5e;
     background-color: #aaadaf;
     border-radius: 50%;
-    stroke: #f9f9f9;
+    //stroke: #f9f9f9;
+    border: 1px solid rgba(#f9f9f9, .5);
   }
   &__rounded:hover {
     fill: #fff;
     background-color: #555b5e;
+    border: 0;
   }
 }

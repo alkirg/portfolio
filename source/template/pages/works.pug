@@ -12,25 +12,12 @@ block content
             .title Мои работы
             include ../common/slider
         section.reviews-section
-            //+backgroundImage('', 'map')
-            .container.container_centered
-                .content__title.title.title__title--lines
-                    | Что обо мне <br>
-                    | говорят
-            .reviews.container.container_reviews
-                +review(
-                    'Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!',
-                    {src: 'assets/images/kd.png', alt: 'Ковальчук Дмитрий'},
-                    {name: 'Ковальчук Дмитрий', occupation: 'основатель Loftschool'}
-                )
-                +review(
-                'Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!',
-                {src: 'assets/images/sv.png', alt: 'Сабанцев Владимир'},
-                {name: 'Сабанцев Владимир', occupation: 'преподаватель'}
-                )
-            .container.container_centered.container_contacts
-                +contactsForm
-            a.arrow-up.arrow-up_center.arrow-up_works(href="#")
+            .title
+                | Что обо мне <br>
+                | говорят
+            include ../common/reviews
+            include ../common/contacts-form
+            a.arrow-up(href="#")
 
 block footer
     include ../common/_footer

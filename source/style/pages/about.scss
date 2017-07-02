@@ -1,0 +1,41 @@
+@import "../components/skills";
+
+.page-about {
+  .triangle__left {
+    fill: #f0efea;
+  }
+  .triangle__right {
+    fill: #efece0;
+  }
+}
+.content {
+  &__about {
+    @include flex(row, center, stretch);
+  }
+  &__left {
+    width: 50%;
+    background-color: #f0efea;
+    @include flex(column, flex-start, center);
+    padding: 0 80px;
+  }
+  &__right {
+    width: 50%;
+    background-color: #efece0;
+    @include flex(column, flex-start, center);
+    padding: 70px 28px 0 40px;
+  }
+  &__info {
+    @include flex(column, flex-start, center);
+  }
+  &__photo {
+    margin-bottom: 40px;
+  }
+}
+.background {
+  &__image {
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+@import "../common/contacts";

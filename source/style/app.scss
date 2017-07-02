@@ -10,20 +10,23 @@
 //@import "page-works";
 //@import "common/footer";
 
+// mixins
+@import "mixins/mixins";
+
 // layout
 @import "layout/common";
 @import "layout/fonts";
-
-// mixins
-@import "mixins/mixins";
+@import "layout/footer";
 
 // components
 @import "components/copyright";
 @import "components/socials";
 @import "components/icons";
 @import "components/hero";
+@import "components/menu";
 
 // pages
 @import "pages/index";
 @import "pages/login";
 @import "pages/works";
+@import "pages/about";

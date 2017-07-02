@@ -1,39 +1,35 @@
 extends ../_template
 
 block variables
-    - var title = 'About page'
+    -
+        var title = 'About page'
+        var pageClass = 'page-about'
 
 block content
-    include ../common/hero
-    section.content.container.content__about
-        .content__left
-            //.content__triangle.triangle__left
-                +triangle('assets/images/about_bg_left.svg#Layer_1')
-            .content__title.title.title__title--lines Обо мне
-            .content__photo
-                img.content__photo_img(src="assets/images/about-photo.jpg" alt="Владимир Астахов")
-            .content__info
-                .content__title.content__title--small.title.title__title--lines Кто я
+    main.main
+        include ../common/hero
+        section.content.content__about
+            .content__left
+                .title Обо мне
+                .content__photo
+                    img.content__photo_img(src="assets/images/about-photo.jpg" alt="Владимир Астахов")
+                .content__info
+                    .title.title__subtitle Кто я
+                    .content__text
+                        p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                        p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+            .content__right
+                .title.title__subtitle
+                    | Чем я могу быть<br>
+                    | вам полезен
                 .content__text
-                    p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-                    p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-        .content__right
-            //.content__triangle.triangle__right
-                +triangle('assets/images/about_bg_right.svg#Layer_1')
-            .content__title.content__title--small.title.title__title--lines Чем я могу быть вам полезен
-            .content__text
-                p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
-            .content__skill--margin
-                +skillsBlock('Frontend', [skills[0], skills[1], skills[2]], 'skills')
-            .content__skill--margin
-                +skillsBlock('Backend', [skills[3], skills[4], skills[5], skills[6]], 'skills')
-            .content__skill--margin
-                +skillsBlock('WorkFlow', [skills[7], skills[8], skills[9]], 'skills')
-    section.map
-        .map__wrapper
-            +backgroundImage('assets/images/map.jpg', 'Карта')
-            .contacts-block
-                .contacts-block__title.content__title.content__title--small.title.title__title--lines Контакты
-                +contactsList(contacts, 'contacts-list')
+                    p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+                include ../common/skills
+        section.map
+            .map__wrapper
+                +backgroundImage('assets/images/map.jpg', 'Карта')
+                .contacts-block
+                    .contacts-block__title.content__title.content__title--small.title.title__title--lines Контакты
+                    +contactsList(contacts, 'contacts-list')
 block footer
     include ../common/_footer
