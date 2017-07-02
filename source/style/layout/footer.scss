@@ -8,7 +8,7 @@
   }
   &__row {
     @include flex(row, space-between, center);
-    padding: 16px 30px;
+    padding: 16px 30px 0;
     color: rgba(#fff, .5);
   }
   &__col {
@@ -17,4 +17,9 @@
       text-align: right;
     }
   }
+}
+.page-login .footer, .page-index .footer {
+  background: none;
+  font-weight: 400;
+  width: auto;
 }

@@ -23,5 +23,11 @@
   border-radius: 5px;
   border: 1px solid #ffffff;
   padding: 15px 29px 14px 28px;
+
+  &:hover {
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    color: #00bfa5;
+  }
 }
 @import "../components/user-info";

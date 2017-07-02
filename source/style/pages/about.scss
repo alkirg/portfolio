@@ -1,4 +1,6 @@
 @import "../components/skills";
+@import "../components/map";
+@import "../components/contacts";
 
 .page-about {
   .triangle__left {
@@ -38,4 +40,8 @@
   }
 }
 
-@import "../common/contacts";
+.page-about .footer {
+  margin-top: -150px;
+  z-index: 1000;
+}
+

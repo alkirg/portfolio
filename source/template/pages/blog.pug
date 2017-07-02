@@ -1,11 +1,15 @@
 extends ../_template
 
 block variables
-    - var title = 'Blog page'
+    -
+        var title = 'Blog page'
+        var pageClass = 'page-blog'
 
 block content
-    include ../common/hero
-    section.content
+    main.main
+        include ../common/hero
+        section.content
+            include ../common/blog
 
 block footer
     include ../common/_footer
