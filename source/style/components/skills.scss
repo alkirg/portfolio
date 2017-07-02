@@ -3,6 +3,9 @@
 
   &__row {
     @include flex(column);
+    @include tablets {
+      text-align: center;
+    }
   }
   &__title {
     font-size: 28px;
@@ -10,5 +13,8 @@
   }
   &__list {
     @include flex(row, flex-start, center);
+    @include tablets {
+      justify-content: center;
+    }
   }
 }

@@ -49,6 +49,13 @@
     font-weight: 500;
     text-decoration: none;
     border-right: 2px solid rgba(#dee3e7, .5);
+    @include tablets {
+      font-size: 16px;
+    }
+    @include phones {
+      font-size: 14px;
+      padding: 14px 22.2px;
+    }
     &:first-child {
       border-radius: 0 0 0 5px;
     }

@@ -5,14 +5,28 @@
 
   &__socials {
     @include flex(row, flex-end);
+    @include tablets {
+      justify-content: center;
+    }
   }
   &__row {
     @include flex(row, space-between, center);
     padding: 16px 30px 0;
     color: rgba(#fff, .5);
+    @include tablets {
+      flex-direction: column;
+    }
+    @include phones {
+      padding: 16px 15px 0;
+    }
   }
   &__col {
     width: 50%;
+    @include tablets {
+      width: 100%;
+      margin-bottom: 10px;
+      text-align: center !important;
+    }
     &--text_right {
       text-align: right;
     }

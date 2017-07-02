@@ -8,9 +8,12 @@
   padding: 33px 0 0;
   width: 380px;
   height: 406px;
-
+  @include tablets {
+    font-size: 16px;
+  }
   @include phones {
     width: 95%;
+    font-size: 14px;
   }
 
   &__input_block {

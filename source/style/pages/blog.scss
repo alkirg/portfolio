@@ -4,10 +4,17 @@
   &__left {
     width: 33%;
     padding: 46px 40px;
+    @include tablets {
+      display: none;
+    }
   }
   &__right {
     width: 67%;
     padding: 46px 100px 46px 0;
+    @include tablets {
+      width: 100%;
+      padding: 46px 25px;
+    }
   }
 }
 .article {
@@ -29,6 +36,13 @@
     font-size: 35px;
     font-weight: 400;
     line-height: 41px;
+    @include tablets {
+      font-size: 30px;
+      line-height: normal;
+    }
+    @include phones {
+      font-size: 21px;
+    }
 
     &:after, &:before {
       display: none;

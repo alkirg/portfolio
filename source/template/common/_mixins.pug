@@ -45,3 +45,8 @@ mixin review(text, image, name)
 mixin backgroundImage(src, alt)
     .background
         img.background__image(src=`${src}` alt=`${alt}`)
+
+mixin svgBackground(svg)
+    .bg-title.content__bg_title
+        svg.bg-title__caption
+            use(xlink:href=`${svg}`)

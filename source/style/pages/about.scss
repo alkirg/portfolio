@@ -13,18 +13,38 @@
 .content {
   &__about {
     @include flex(row, center, stretch);
+    @include tablets {
+      flex-direction: column;
+    }
   }
   &__left {
     width: 50%;
     background-color: #f0efea;
     @include flex(column, flex-start, center);
     padding: 0 80px;
+    @include tablets {
+      width: 100%;
+    }
+    @include phones {
+      padding: 0;
+    }
   }
   &__right {
     width: 50%;
     background-color: #efece0;
     @include flex(column, flex-start, center);
     padding: 70px 28px 0 40px;
+    @include tablets {
+      width: 100%;
+    }
+    @include phones {
+      padding: 0;
+    }
+  }
+  &__text {
+    @include tablets {
+      padding: 0 10px;
+    }
   }
   &__info {
     @include flex(column, flex-start, center);

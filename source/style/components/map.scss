@@ -6,6 +6,20 @@
       position: absolute;
       top: calc(50% - 95px);
       left: calc(50% - 190px);
+      @include tablets {
+        top: calc(50% - 195px);
+      }
+      @include phones {
+        position: relative;
+        top: 0;
+        left: 0;
+        order: -1;
+      }
     }
+  }
+}
+@include phones {
+  .map__wrapper {
+    @include flex(column);
   }
 }
