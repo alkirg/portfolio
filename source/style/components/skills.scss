@@ -10,11 +10,29 @@
   &__title {
     font-size: 28px;
     font-weight: 500;
+    margin: 40px 0 19px;
   }
   &__list {
     @include flex(row, flex-start, center);
     @include tablets {
       justify-content: center;
+      flex-wrap: wrap;
     }
+  }
+  &__item {
+    width: 110px;
+    height: 110px;
+    position: relative;
+    margin-right: 37px;
+  }
+  &__name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 13px;
+    line-height: 15px;
+    text-align: center;
+    color: #00bfa5;
   }
 }

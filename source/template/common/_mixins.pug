@@ -18,8 +18,11 @@ mixin skillsBlock(title, skills, className)
     div(class=`${className}__title`)= title
     div(class=`${className}__list`)
         each skill in skills
-            div= skill.name
-            div= skill.percent
+            div(class=`${className}__item`)
+                div(class=`${className}__name`)= skill.name
+                svg.circles(viewBox="0 0 110 110")
+                    circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
+                    circle(r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class=`circle__second circle-${skill.percent}`)
 
 mixin contactsList(contacts, className)
     ul(class=`${className}`)

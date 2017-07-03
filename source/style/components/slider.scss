@@ -1,6 +1,8 @@
 .slider {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
+  background-color: #f0efe9;
   @include tablets {
     flex-direction: column;
   }
@@ -11,7 +13,6 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    background-color: #efebe0;
     @include tablets {
       width: 100%;
     }
@@ -22,7 +23,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #f0efe9;
     @include tablets {
       width: 100%;
     }
@@ -44,8 +44,15 @@
     }
   }
   &__image {
-    margin: 113px 0 101px;
-    order: 0;
+    padding: 113px 0 101px;
+    width: 50%;
+    background-color: #efebe0;
+    @include flex(row, center, center);
+
+    @include tablets {
+      order: -1;
+      width: 100%;
+    }
   }
   &__link {
     width: 199px;
@@ -73,6 +80,13 @@
   }
   &__navigation {
     display: flex;
+    width: 50%;
+    margin-left: auto;
+    background-color: #efebe0;
+    @include tablets {
+      width: 100%;
+      margin: 20px auto 0;
+    }
   }
   &__nav_arrow {
     position: absolute;
@@ -84,6 +98,11 @@
   }
   &__nav {
     position: relative;
+    width: 50%;
+    &_image img {
+      width: 100%;
+      height: auto;
+    }
   }
   &__nav_arrow--up {
     background: url('../images/portf-arrow-up.png') no-repeat;
