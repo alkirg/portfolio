@@ -33,4 +33,16 @@
     color: #00bfa5;
   }
 }
+
+.flip {
+  width: 380px;
+  height: 406px;
+  margin: auto;
+  &_hidden {
+    visibility: hidden;
+  }
+  &_active {
+    visibility: visible;
+  }
+}
 @import "../components/user-info";

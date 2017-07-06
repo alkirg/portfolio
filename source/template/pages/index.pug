@@ -25,16 +25,18 @@ block header
             a.header__login_button(href='login.html') Авторизоваться
 block content
     main.main
-        .user-info.main__user_info
-            .user-info__image
-                img(src="assets/images/index-hero.jpg" alt="")
-            .user-info__person
-                .user-info__name Владимир Астахов
-                .user-info__subtitle Личный сайт веб разработчика
-            +socialLinks(socials, 'user-info__socials', false)
-            .user-info__links
-                each link in links
-                    a(class="user-info__link" href=`${link.link}`)= link.name
+        .flip
+            .user-info.main__user_info
+                .user-info__image
+                    img(src="assets/images/index-hero.jpg" alt="")
+                .user-info__person
+                    .user-info__name Владимир Астахов
+                    .user-info__subtitle Личный сайт веб разработчика
+                +socialLinks(socials, 'user-info__socials', false)
+                .user-info__links
+                    each link in links
+                        a(class="user-info__link" href=`${link.link}`)= link.name
+            include login
 
 block footer
     footer.footer
