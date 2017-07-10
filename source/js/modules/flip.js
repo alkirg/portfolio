@@ -1,9 +1,10 @@
-$(document).ready(function () {
-    var link = $('.header__login_button');
-    var userInfo = $('.user-info');
-    var loginForm = $('.login-form');
-    var flip = $('.flip');
+import "./jquery.flip.min.js";
+const link = $('.header__login_button');
+const userInfo = $('.user-info');
+const loginForm = $('.login-form');
+let flip = $('.flip');
 
+const run = () => {
     flip.flip({
         front: '.user-info',
         back: '.login-form',
@@ -26,4 +27,6 @@ $(document).ready(function () {
         }
         e.preventDefault();
     });
-});
+}
+
+export default run;
